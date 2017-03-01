@@ -6,9 +6,17 @@ $(document).ready(function() {
     $("#datepicker").datepicker();
   });
 
+$(document).ready(function() {
+  $(".prev").click();
+});
+
+$(document).ready(function() {
+  $(".next").click();
+});
+
 function loadImage(date) {
     var params = {
-        api_key : key,
+        api_key : key, //add key
         hd: true
     };
 
@@ -26,5 +34,16 @@ function loadImage(date) {
         $('#title').html(data.title);
         $('#description').html(data.explanation);
     });
+
+  var PAGE_ELEMENTS = {
+  'start': $('.start-page'),
+  'main': $('.main-page'),
+};
+
+$("form[name='app-start']").submit(function(event) {
+  event.preventDefault();
+  setRoute(state, 'main');
+  renderApp(state, PAGE_ELEMENTS);
+});
 
 
