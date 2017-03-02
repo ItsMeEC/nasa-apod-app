@@ -18,26 +18,22 @@ function loadImage(date) {
     var params = {
         api_key : key, //add key
         hd: true
-    };
+};
 
-    if (date != null) {
-        params['date'] = date;
-    }
-
-    var request = $.ajax({
+var request = $.ajax({
         url: ENDPOINT,
         data: params,
-    });
+});
 
-    request.done(function( data ) {
-        $('#img').attr('src', data.hdurl);
-        $('#title').html(data.title);
-        $('#description').html(data.explanation);
-    });
+request.done(function( data ) {
+    $('#img').attr('src', data.hdurl);
+    $('#title').html(data.title);
+    $('#description').html(data.explanation);
+});
 
-  var PAGE_ELEMENTS = {
-  'start': $('.start-page'),
-  'main': $('.main-page'),
+var PAGE_ELEMENTS = {
+ 'start': $('.start-page'),
+ 'main': $('.main-page'),
 };
 
 $("form[name='app-start']").submit(function(event) {
