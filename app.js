@@ -1,7 +1,7 @@
 
 
 
-
+/*
 $(document).ready(function() {
     $("#datepicker").datepicker();
   });
@@ -16,17 +16,17 @@ $(document).ready(function() {
 
 function loadImage(date) {
     var params = {
-        api_key : key, //add key
+        api_key : 'ri0EZkle2DPanZWtyS8oZFgC4coub86CDtV5OiYV', //add key
         hd: true
 };
 
 var request = $.ajax({
-        url: ENDPOINT,
+        url: 'https://api.nasa.gov/planetary/apod',
         data: params,
 });
 
 request.done(function( data ) {
-    $('#img').attr('src', data.hdurl);
+    $('#img').attr('src', data.hdurl); 
     $('#title').html(data.title);
     $('#description').html(data.explanation);
 });
@@ -41,5 +41,49 @@ $("form[name='app-start']").submit(function(event) {
   setRoute(state, 'main');
   renderApp(state, PAGE_ELEMENTS);
 });
+*/
+
+
+
+//ajax call
+var api_key = 'ri0EZkle2DPanZWtyS8oZFgC4coub86CDtV5OiYV';
+
+var nasa_url = 'https://api.nasa.gov/planetary/apod';
+
+function getDataFromApi(searchTerm, callback) {
+  var settings = {
+    url: nasa_url,
+    data: {
+      date: searchTerm,
+      api_key: api_key,
+    },
+    dataType: 'json',
+    type: 'GET',
+    success: callback
+  };
+  $.ajax(settings);
+}
+
+function displayNasaSearchData(data) {
+var results = $('.results');
+results.empty();
+var imageLink = data.url;
+var heading = data.title;
+var descp =data.explanation;
+var date= data.date;
+var elem = '<h2> '+ heading +' </h2><div id="picture-div"><img class="img-responsive" src="'+ imageLink +'" /></a></div><div id="text-div"><p> '+ descp +' </p></div>';
+results.append(elem);
+}
+
+
+function watchSubmit() {
+  $('#search').submit(function(e) {
+    e.preventDefault();
+    var query = $(this).find('#datepicker').val();
+    getDataFromApi(query, displayNasaSearchData);
+  });
+}
+
+$(function(){watchSubmit();});
 
 

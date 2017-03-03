@@ -17,19 +17,23 @@
 			<h1 class="top-title">Out of This</h1>
 			<h1 class="world">World</h1>
 
-			<button type="submit" class="btn btn-primary">Begin</button>
 		</div>
 		
 		<div class="main-page">
-			<form>
+			<form id="search">
 				<input id="datepicker" name="date picker">
+				<input type="submit" value="submit"></input>
+				<button type="button" class="btn btn-primary btn-sm prev">Previous Date</button>
+				<button type="button" class="btn btn-primary btn-sm next">Next Date</button>
 			</form>
+
+			<div class="results">
+				
+			</div>
 			<span class="date-selected"></span>
 			<h1 id="title"></h1>
 			<h3 id="description"></h3>
 			<img id="img">
-			<button type="button" class="btn btn-primary btn-sm prev">Previous Date</button>
-			<button type="button" class="btn btn-primary btn-sm next">Next Date</button>
 			
 		</div>
 
