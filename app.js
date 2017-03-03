@@ -14,12 +14,6 @@ $(document).ready(function() {
   $(".next").click();
 });
 
-function loadImage(date) {
-    var params = {
-        api_key : 'ri0EZkle2DPanZWtyS8oZFgC4coub86CDtV5OiYV', //add key
-        hd: true
-};
-
 var request = $.ajax({
         url: 'https://api.nasa.gov/planetary/apod',
         data: params,
