@@ -1,0 +1,26 @@
+
+.container {
+	padding: 60px;
+	background-image: url('stars.jpg');
+	height: 1000px;
+}
+
+.start-page {
+	background-color: grey;
+	padding: 45px;
+	border-radius: 15%;
+}
+
+.top-title {
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Bungee', cursive;
+	color: white;
+	padding-bottom: 30px;
+}
+
+.world {
+	text-align: center;
+	font-size: 100px; 
+	color: white;
+}
