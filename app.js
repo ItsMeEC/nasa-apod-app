@@ -41,6 +41,9 @@ $("form[name='app-start']").submit(function(event) {
 
 //ajax call
 
+var blink_speed = 500; var t = setInterval(function () { var ele = document.getElementById('blinker'); ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden'); }, blink_speed);
+
+
 $(document).ready(function() {
     $("#datepicker").datepicker();
   });
@@ -71,7 +74,7 @@ var imageLink = data.url;
 var heading = data.title;
 var descp =data.explanation;
 var date= data.date;
-var elem = '<h2 style= "color: white"> '+ heading +' </h2><div id="picture-div"><img style= "height: 400px; width: 400px;" class="img-responsive" src="'+ imageLink +'" /></a></div><div id="text-div"><p style= "color: white" > '+ descp +' </p></div>';
+var elem = '<h2 style= "color: white"> '+ heading +' </h2><div id="picture-div"><img style= "height: 400px; width: 400px;" class="img-responsive nasa-img" src="'+ imageLink +'" /></a></div><div id="text-div"><p style= "color: white" > '+ descp +' </p></div>';
 results.append(elem);
 }
 
