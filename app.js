@@ -1,48 +1,7 @@
 
-
-
-/*
-$(document).ready(function() {
-    $("#datepicker").datepicker();
-  });
-
-$(document).ready(function() {
-  $(".prev").click();
-});
-
-$(document).ready(function() {
-  $(".next").click();
-});
-
-var request = $.ajax({
-        url: 'https://api.nasa.gov/planetary/apod',
-        data: params,
-});
-
-request.done(function( data ) {
-    $('#img').attr('src', data.hdurl); 
-    $('#title').html(data.title);
-    $('#description').html(data.explanation);
-});
-
-var PAGE_ELEMENTS = {
- 'start': $('.start-page'),
- 'main': $('.main-page'),
-};
-
-$("form[name='app-start']").submit(function(event) {
-  event.preventDefault();
-  setRoute(state, 'main');
-  renderApp(state, PAGE_ELEMENTS);
-});
-*/
-
-
-
-//ajax call
-
-var blink_speed = 500; var t = setInterval(function () { var ele = document.getElementById('blinker'); ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden'); }, blink_speed);
-
+/*window.setInterval(function() {
+$('.blinkText').toggle();
+}, 300);*/
 
 $(document).ready(function() {
     $("#datepicker").datepicker();
