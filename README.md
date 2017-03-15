@@ -2,6 +2,8 @@
 
 NASA is a United States Agency responsible for scientific study related to air and outer space. NASA offers a lot of scientific information to the public online, some of that public information is used to run this application. It is a database in which a daily picture is posted every day relating to astronomical events and phenomena. In this application, a user enters a date via the arrows in the date selector in order to get one of NASA's daily pictures that was posted on that particular date. Please make sure to select a date in the past as NASA has not gone to the future, yet.
 
+Picking a date- highlight the month, day and year then select a number with the arrow keys to the right. Please be sure to select a date that has already occurred.  
+
 ## Built With
 
 - HTML5
