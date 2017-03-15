@@ -3,9 +3,9 @@
 $('.blinkText').toggle();
 }, 300);*/
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $("#datepicker").datepicker();
-  });
+  }); */
 
   
 var api_key = 'ri0EZkle2DPanZWtyS8oZFgC4coub86CDtV5OiYV';
